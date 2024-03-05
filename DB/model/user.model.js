@@ -1,7 +1,7 @@
 import { DataTypes  }  from 'sequelize';
 import {sequelize} from '../connection.js'
 import Blog from './blod.model.js';
-const User = sequelize.define('User', 
+const User = sequelize.define('TableUsers', 
 {
   name: {
     type: DataTypes.STRING(50),
