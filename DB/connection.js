@@ -1,11 +1,12 @@
 import {Sequelize}  from "sequelize"
 
 export const sequelize = new Sequelize(
-    'orm', // TutorialsPoint
-    'root', // root
-    '',{
+    'freedb_orm_db', // TutorialsPoint
+    'freedb_shahd', // root
+    'P@CyJx7hT?%m3Zd',{
+        port:3306,
        dialect: 'mysql',
-       host: 'localhost'
+       host: 'sql.freedb.tech'
     }
 )
 export const connection = async()=>{
