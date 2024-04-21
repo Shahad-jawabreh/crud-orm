@@ -20,12 +20,11 @@ export const getBlogs = async(req, res) =>{
     }
 }
 export const addBlogs =async(req, res) =>{
-    const {title, body, UserId} = req.body
+    const {title, body} = req.body
     try{
         const result = await BlogTable.create({
             title,
-            body,
-            UserId
+            body
         });
         return res.json("added successfully")
     }catch(err){

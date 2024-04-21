@@ -2,8 +2,10 @@ import { connection } from "./DB/connection.js"
 import UserRouter from './src/modules/users/users.js'
 import authRouter from './src/modules/auth/auth.js'
 import blogRouter from './src/modules/blogs/blogs.js'
+import cors  from 'cors '
 const initapp = (app,express)=>{
     app.use(express.json())
+    app.use(cors())
     connection()
     app.get('/',(req,res)=>{return res.json({massege:"welcom home page"})})
     app.use('/users',UserRouter)

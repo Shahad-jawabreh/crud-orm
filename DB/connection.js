@@ -11,7 +11,7 @@ export const sequelize = new Sequelize(
 )
 export const connection = async()=>{
     try{
-        return await sequelize.sync({alter: true})
+        return await sequelize.sync({alter: true})// {alter: true} if any change will be compile 
     }catch(e){
         console.log(e.massege)
     }
